@@ -20,7 +20,7 @@ public class CommentsDataSource {
     private SQLiteOpenHelper dbHelper;
     private String[] allColumns = {MySQLiteHelper.COLUMN_ID,
     MySQLiteHelper.COLUMN_COMMENT };
-    
+
     public CommentsDataSource(Context context){
         dbHelper = new MySQLiteHelper(context);
     }
@@ -43,6 +43,12 @@ public class CommentsDataSource {
         Comment newComment = cursorToComment(cursor);
         cursor.close();
         return newComment;
+    }
+    public void deleteComment(Comment comment){
+        long id = comment.getId();
+        System.out.println("Comment deleted with id: " + id);
+        database.delete(MySQLiteHelper.TABLE_COMMENTS, MySQLiteHelper.COLUMN_ID
+        + " = " + id, null);
     }
 
     public List<Comment> getAllComments(){

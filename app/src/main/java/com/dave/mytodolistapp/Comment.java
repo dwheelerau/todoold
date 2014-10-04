@@ -14,7 +14,7 @@ public class Comment {
         this.id = id;
     }
     public String getComment(){
-        return comment
+        return comment;
     }
     public void setComment(String comment){
         this.comment = comment;

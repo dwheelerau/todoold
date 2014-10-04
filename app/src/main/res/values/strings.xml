@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">MyToDoListApp</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello">Hello</string>
     <string name="action_settings">Settings</string>
 
 </resources>
